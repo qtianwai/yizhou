@@ -10,7 +10,7 @@ Page({
     },
     goToIndex: function () {
         wx.switchTab({
-            url: '/pages/food/index',
+            url: '/pages/huyueInfo/index',
         });
     },
     onLoad: function () {

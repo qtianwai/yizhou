@@ -11,7 +11,8 @@
         "pages/my/addressSet",
         "pages/my/comment",
         "pages/my/commentList",
-        "pages/my/index"
+        "pages/my/index",
+        "pages/huyueInfo/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -27,7 +28,7 @@
         "box-shadow": "0 0 6px 0",
         "list": [
             {
-                "pagePath": "pages/food/index",
+                "pagePath": "pages/huyueInfo/index",
                 "iconPath": "images/nav/home-off.png",
                 "selectedIconPath": "images/nav/home-on.png",
                 "text": "首页"
