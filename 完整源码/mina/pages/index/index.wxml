@@ -4,26 +4,26 @@
     <image class="remind-img" src="/images/more/loading.gif"></image>
   </view>
   <block wx:else>
-    <image class="title" src="/images/more/title8.png"></image>
+    <image class="title" src="/images/more/封面2-透明.png"></image>
     <view class="content">
       <view class="hd" style="transform:rotateZ({{angle}}deg);">
-        <image class="logo" src="/images/more/logo.png"></image>
+        <image class="logo" src="/images/more/logo2.png"></image>
         <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
         <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
       </view>
       <view class="bd">
-         <image class="smalltitle" src="/images/more/confirm-word1.png"></image>
+         <image class="smalltitle" src="/images/more/封面1-透明.png"></image>
 
 
         <view class="confirm-btn" bindtap='goToIndex' wx:if="{{regFlag==true}}">
-          <text>走，逛逛去</text>
+          <text>走，上报去</text>
         </view>
 
         <button class="confirm-btn"  open-type="getUserInfo" bindgetuserinfo="login" wx:if="{{regFlag==false}}">
             授权登录
         </button>
 
-        <text class="copyright">@编程浪子 54php.cn</text>
+        <text class="copyright">@关注公众号 求真帝</text>
       </view>
     </view>
   </block>

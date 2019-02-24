@@ -13,8 +13,3 @@ form{
   margin-left: 20rpx;
   position: relative;
 }
-
-.page-body-center {
-  padding: 80rpx;
-  text-align: center;
-}

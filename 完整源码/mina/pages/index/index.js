@@ -2,6 +2,12 @@
 //获取应用实例
 var app = getApp();
 Page({
+    onShareAppMessage() {
+        return {
+          title: '壹周互阅上报',
+          path: 'pages/index/index'
+        }
+    },
     data: {
         remind: '加载中',
         angle: 0,

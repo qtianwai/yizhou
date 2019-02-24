@@ -1,10 +1,10 @@
 <view class="index">
   <view class="index-hd">
     <image class="index-logo" src="resources/kind/logo.png"></image>
-    <view class="index-desc">每日一次上报，统一时间互阅。晚上08:45公布规则，21:00统一互阅，互阅完记得签到哦！有互粉需求的朋友可在签到后在群内自由发挥！每天只能上报一次！</view>
+    <view class="index-desc">每日一次上报，统一时间互阅。晚上08:55公布规则，21:00统一互阅，互阅完记得签到哦！有互粉需求的朋友可在签到后在群内自由发挥！每天只能上报一次！</view>
   </view>
     
-    <view class="page-body">
+    <view class="page-body"  wx:if="{{regFlag==true}}">
     <form catchsubmit="formSubmit" catchreset="formReset">
       
       <view class="page-section">
@@ -12,7 +12,7 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__bd">
-              <input class="weui-input" name="input1" placeholder="请输入您在本群的昵称？" />
+              <input class="weui-input" name="ST_GROUPUSERNAME" placeholder="请输入您在本群的昵称？" />
             </view>
           </view>
         </view>
@@ -23,7 +23,7 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__bd">
-              <input class="weui-input" name="input2" placeholder="请输入公众号名称" />
+              <input class="weui-input" name="ST_GZHNAME" placeholder="请输入公众号名称" />
             </view>
           </view>
         </view>
@@ -34,7 +34,7 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__bd">
-              <input class="weui-input" name="input3" placeholder="请粘贴文章链接" />
+              <input class="weui-input" name="ST_GZHURL" placeholder="请粘贴文章链接" />
             </view>
           </view>
         </view>
@@ -43,7 +43,7 @@
       <view class="page-section">
         <view class="page-section-title">请选择你所在的群聊</view>
         <view class="weui-cells weui-cells_after-title">
-          <checkbox-group bindchange="checkboxChange" name="checkbox1">
+          <checkbox-group bindchange="checkboxChange" name="ST_GROUPNAME">
             <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
               <view class="weui-cell__hd">
                 <checkbox value="{{item.value}}" checked="{{item.checked}}"/>
@@ -55,10 +55,16 @@
       </view>
             
       <view class="btn-area">
-        <button type="primary" formType="submit">提交</button>
+        <button type="primary" formType="submit" bindtap="submitInfo">提交</button>
         <button formType="reset">重置</button>
       </view>
     </form>
     
   </view>
+  <view class="page-body-center"  wx:if="{{regFlag==false}}">
+      <view class="page-section">
+        <view class="page-section-title">今日互阅已上报，请勿重复上报</view>
+      </view>
+  </view> 
+ 
 </view>

@@ -1,4 +1,4 @@
-<view class="container">
+<!-- <view class="container">
     <view class="comment-list">
         <view class="a-order" wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item">
             <view class="order-date">
@@ -12,4 +12,20 @@
             </view>
         </view>
     </view>
+</view> -->
+
+<view class="container">
+    <view class="comment-list">
+        <view class="a-order" wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item">
+            <view class="order-date">
+                <view class="date-box">上报时间：{{item.DT_STARTDATE}}</view>
+            </view>
+            <view class="goods-info">
+                <view class="goods-des">
+                   <view>链接地址：{{item.ST_GZHURL}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>
+

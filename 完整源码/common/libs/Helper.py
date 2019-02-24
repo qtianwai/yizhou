@@ -65,6 +65,11 @@ def getCurrentDate( format = "%Y-%m-%d %H:%M:%S"):
     #return datetime.datetime.now().strftime( format )
     return datetime.datetime.now()
 
+def getCurrentDayDate( format = "%Y-%m-%d"):
+    #return datetime.datetime.now().strftime( format )
+    date = datetime.datetime.now()
+    return date.strftime(format)
+
 '''
 获取格式化的时间
 '''

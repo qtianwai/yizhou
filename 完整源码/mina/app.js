@@ -5,14 +5,14 @@ App({
     globalData: {
         userInfo: null,
         version: "1.0",
-        shopName: "Python3 + Flask 订餐全栈系统",
+        shopName: "壹周",
         //sdomain:"http://192.168.0.119:8999/api",
         //domain:"https://food.54php.cn/api"
         domain: "http://127.0.0.1:8999/api"
     },
     tip:function( params ){
         var that = this;
-        var title = params.hasOwnProperty('title')?params['title']:'编程浪子提示您';
+        var title = params.hasOwnProperty('title')?params['title']:'壹周提示您';
         var content = params.hasOwnProperty('content')?params['content']:'';
         wx.showModal({
             title: title,
@@ -31,7 +31,7 @@ App({
         })
     },
     alert:function( params ){
-        var title = params.hasOwnProperty('title')?params['title']:'编程浪子提示您';
+      var title = params.hasOwnProperty('title') ? params['title'] :'壹周提示您';
         var content = params.hasOwnProperty('content')?params['content']:'';
         wx.showModal({
             title: title,
